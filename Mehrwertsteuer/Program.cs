@@ -17,7 +17,8 @@ namespace Mehrwertsteuer
         {
             //Deklaration der benoetigten Variablen
             double geldbetrag = 0;
-            double mwstsatz = 0 ;
+            double mwstsatz = 0;
+            double ergebnis = 0; 
             string weiterrechnen = "j";
             int auswahl;
 
@@ -47,8 +48,7 @@ namespace Mehrwertsteuer
                 }
                 Console.WriteLine();
 
-
-                geldbetrag = geldbetrag * (mwstsatz / 100);
+                ergebnis = geldbetrag * (mwstsatz / 100);
 
                 Console.WriteLine("Wollen Sie die Mehrwertsteuer (1) oder die Mehrwertsteuer und die getätigten Eingaben ausgegeben bekommen? (2)");
                 
@@ -56,10 +56,18 @@ namespace Mehrwertsteuer
 
                 if (auswahl == 1)
                 {
-                    Console.WriteLine("Die Mehrwertsteuer beträgt: " + geldbetrag + "Euro");
+                    Console.WriteLine("Die Mehrwertsteuer beträgt: " + ergebnis +  "Euro");
                 }
 
+                else if (auswahl == 2)
+                {
+                    Console.WriteLine("Die Mehrwertsteuer beträgt: " + ergebnis +  "Euro\n Der angegebene Betrag ist: " + geldbetrag + "\nDer angegebene Mehrwertsteuersatz beträgt: " + mwstsatz +"\n" );
+                }
 
+                else
+                {
+                    Console.WriteLine("Bitte geben Sie einen gültigen Wert (1, 2) für Ihre Auswahl ein.");
+                }
                 
             }
             while (weiterrechnen != "n");
