@@ -19,6 +19,7 @@ namespace Mehrwertsteuer
             double geldbetrag = 0;
             double mwstsatz = 0 ;
             string weiterrechnen = "j";
+            int auswahl;
 
             do
             {
@@ -47,8 +48,19 @@ namespace Mehrwertsteuer
                 Console.WriteLine();
 
 
-                geldbetrag = geldbetrag * mwstsatz / 100;
-                Console.WriteLine("Die Mehrwertsteuer beträgt " + mwstsatz + "Euro");
+                geldbetrag = geldbetrag * (mwstsatz / 100);
+
+                Console.WriteLine("Wollen Sie die Mehrwertsteuer (1) oder die Mehrwertsteuer und die getätigten Eingaben ausgegeben bekommen? (2)");
+                
+                auswahl = Convert.ToInt32(Console.ReadLine());
+
+                if (auswahl == 1)
+                {
+                    Console.WriteLine("Die Mehrwertsteuer beträgt: " + geldbetrag + "Euro");
+                }
+
+
+                
             }
             while (weiterrechnen != "n");
         }
