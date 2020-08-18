@@ -32,7 +32,8 @@ namespace Mehrwertsteuer
                 }
 
                 catch
-                {                    
+                {    
+                    Console.WriteLine();
                 }
                 Console.WriteLine();
 
@@ -45,6 +46,7 @@ namespace Mehrwertsteuer
 
                 catch
                 {
+                    Console.WriteLine();
                 }
                 Console.WriteLine();
 
