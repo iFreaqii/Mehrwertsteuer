@@ -19,7 +19,7 @@ namespace Mehrwertsteuer
             double geldbetrag = 0;
             double mwstsatz = 0;
             double ergebnis = 0; 
-            string weiterrechnen = "j";
+            string weiterrechnen = "";
             int auswahl;
 
             do
