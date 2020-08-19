@@ -32,7 +32,8 @@ namespace Mehrwertsteuer
                 }
 
                 catch
-                {                    
+                {    
+                    Console.WriteLine();
                 }
                 Console.WriteLine();
 
@@ -45,6 +46,7 @@ namespace Mehrwertsteuer
 
                 catch
                 {
+                    Console.WriteLine();
                 }
                 Console.WriteLine();
 
@@ -56,17 +58,26 @@ namespace Mehrwertsteuer
 
                 if (auswahl == 1)
                 {
-                    Console.WriteLine("Die Mehrwertsteuer beträgt: " + ergebnis +  "Euro");
+                    Console.WriteLine("Der Gesamtbetrag beträgt: {0}", ergebnis);
+
+                    Console.WriteLine("\n Möchten Sie eine weiteren Wert berechnen?\nAntworten Sie mit (j)a oder (n)ein.\n");
+                    weiterrechnen = Console.ReadLine();
                 }
 
                 else if (auswahl == 2)
                 {
-                    Console.WriteLine("Die Mehrwertsteuer beträgt: " + ergebnis +  "Euro\n Der angegebene Betrag ist: " + geldbetrag + "\nDer angegebene Mehrwertsteuersatz beträgt: " + mwstsatz +"\n" );
+                    Console.WriteLine("Der Gesamtbetrag beträgt: {0} Euro\nDer angegebene Betrag ist: {1}\nDer angegebene Mehrwertsteuersatz beträgt: {2}\n", ergebnis, geldbetrag, mwstsatz);
+
+                    Console.WriteLine("\n Möchten Sie eine weiteren Wert berechnen?\nAntworten Sie mit (j)a oder (n)ein.\n");
+                    weiterrechnen = Console.ReadLine();
                 }
 
                 else
                 {
                     Console.WriteLine("Bitte geben Sie einen gültigen Wert (1, 2) für Ihre Auswahl ein.");
+
+                    Console.WriteLine("\n Möchten Sie eine weiteren Wert berechnen?\nAntworten Sie mit (j)a oder (n)ein.\n");
+                    weiterrechnen = Console.ReadLine();
                 }
                 
             }
